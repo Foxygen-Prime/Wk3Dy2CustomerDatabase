@@ -18,29 +18,41 @@
 
 //variables//
 const cust = customers.results;
-let custImg = cust[i].picture.large;
-let custFirstName = cust[i].name.first;
-let custLastName = cust[i].name.last;
-let custFullName = `${custFirstName} ${custLastName}`;
-let custEmail = cust[i].email;
-let custAddress1 = cust[i].location.street
-let custAddCity = cust[i].location.street.city
-let custAddState = cust[i].location.street.state
-let custAddZip = cust[i].location.street.postcode
-let custAddress2 = `${custAddCity} ${custAddState} ${custAddZip}`;
-let custPhone = cust[i].phone
-let custSSN = cust[i].id.value
 
 //template//
-let employeeProfiles = `
-  <img src="${custImg}" alt="">
-  <h3>${custFullName}</h3>
-  <p${custEmail}
-  <div class="contact">
-    <p class = "custoAddyPh">${custAddress1}</p>
-    <p class = "custoAddyPh">${custAddress2}</p>
-    <p class = "custoAddyPh">${custPhone}</p>
-  </div>
-  <p class = custoSoc> ${custSSN}</p>
-`
+
 // loop //
+
+  for (let i = 0; i < customers.results.length; i++) {
+
+    let custImg = cust[i].picture.large;
+    let custFirstName = cust[i].name.first;
+    let custLastName = cust[i].name.last;
+    let custFullName = `${custFirstName} ${custLastName}`;
+    let custEmail = cust[i].email;
+    let custAddress1 = cust[i].location.street
+    let custAddCity = cust[i].location.street.city
+    let custAddState = cust[i].location.street.state
+    let custAddZip = cust[i].location.street.postcode
+    let custAddress2 = `${custAddCity} ${custAddState} ${custAddZip}`;
+    let custPhone = cust[i].phone
+    let custSSN = cust[i].id.value
+
+
+    let employeeProfiles = `
+      <div class = "topper">
+        <img src="${custImg}" alt="">
+        <h3 class= "custoName">${custFullName}</h3>
+        <p class = "custoEmail">${custEmail}</p>
+        </div>
+      <div class = "contact">
+        <p class = "custoAddyPh">${custAddress1}</p>
+        <p class = "custoAddyPh">${custAddress2}</p>
+        <p class = "custoAddyPh">${custPhone}</p>
+      </div>
+      <p class = custoSoc> ${custSSN}</p>
+    `
+
+    let container = document.querySelector('.container')
+    container.innerHTML += employeeProfiles
+  }
