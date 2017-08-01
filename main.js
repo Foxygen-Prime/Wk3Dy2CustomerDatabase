@@ -29,21 +29,18 @@ let custAddState = cust[i].location.street.state
 let custAddZip = cust[i].location.street.postcode
 let custAddress2 = `${custAddCity} ${custAddState} ${custAddZip}`;
 let custPhone = cust[i].phone
-let custSSN = cust[i].id.name
+let custSSN = cust[i].id.value
 
 //template//
-employeeProfiles =`
-<img src="${custImg}" alt="">
-<h3>${custFullName}</h3>
-<br>
-${custEmail}
-<br>
-${custAddress1}
-${custAddress2}
-${custPhone}
-${custSSN}`
-
-
+let employeeProfiles = `
+  <img src="${custImg}" alt="">
+  <h3>${custFullName}</h3>
+  <p${custEmail}
+  <div class="contact">
+    <p class = "custoAddyPh">${custAddress1}</p>
+    <p class = "custoAddyPh">${custAddress2}</p>
+    <p class = "custoAddyPh">${custPhone}</p>
+  </div>
+  <p class = custoSoc> ${custSSN}</p>
 `
-
-//loop//
+// loop //
