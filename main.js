@@ -40,17 +40,19 @@ const cust = customers.results;
 
 
     let employeeProfiles = `
-      <div class = "topper">
-        <img src="${custImg}" alt="">
-        <h3 class= "custoName">${custFullName}</h3>
-        <p class = "custoEmail">${custEmail}</p>
+      <div class="customerInfo">
+        <div class = "topper">
+          <img src="${custImg}" alt="">
+          <h3 class= "custoName">${custFullName}</h3>
+          <p class = "custoEmail">${custEmail}</p>
+          </div>
+        <div class = "contact">
+          <p class = "custoAddyPh">${custAddress1}</p>
+          <p class = "custoAddyPh">${custAddress2}</p>
+          <p class = "custoAddyPh">${custPhone}</p>
         </div>
-      <div class = "contact">
-        <p class = "custoAddyPh">${custAddress1}</p>
-        <p class = "custoAddyPh">${custAddress2}</p>
-        <p class = "custoAddyPh">${custPhone}</p>
+        <p class = custoSoc> ${custSSN}</p>
       </div>
-      <p class = custoSoc> ${custSSN}</p>
     `
 
     let container = document.querySelector('.container')

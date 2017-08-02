@@ -6,30 +6,39 @@ font-weight: bold;
 text-transform: uppercase;
 }
 
-.topper{
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.customerInfo {
+  text-align: center;
+}
+
+.custoName {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  border-bottom: 2px solid teal;
+  width: fit-content;
+  text-align: center;
+  align-content: center;
+  margin: 10px auto;
+}
+
+.custoEmail {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
 
 }
 
-.photo {
-
+.custoAddyPh {
+  font-family: 'Raleway', sans-serif;
+  text-transform: capitalize;
 }
 
-.custoName{
-
-}
-
-.custoEmail{
-
-}
-
-.contact {
-
-}
-
-.custoAddyPh{
-
-}
-
-.custoSoc{
+.custoSoc {
+    font-family: 'Raleway', sans-serif;
+    color: teal;
 
 }
